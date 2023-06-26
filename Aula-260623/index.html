@@ -10,18 +10,21 @@
     <!-- <input> Define um campo no formulário a se preenchido -->
     <!-- <button> -> Botão -->
     <form>
+        Teste: <!--pattern define o modelo de npumero que deve ter min. 4 e no máx 8 digitos-->
+        <input type="text" pattern="[0-9]{4,8}"> <br>
+
         Nome: 
         <input type="text" name="nome"> <br>
         E-mail:
-        <input type="email" name="email" placeholder="bruna@example.com"> <br>
+        <input type="email" name="email" maxlength="10" placeholder="bruna@example.com"> <br>
         Senha:
-        <input type="password" name="senha"> <br>
+        <input type="password" name="senha" minlength="6"> <br>
         Idade:
-        <input type="number" name="idade"> <br> 
+        <input type="number" name="idade" min="0" max="150"> <br> 
         Horário de Registro:
         <input type="time" value="15:00" name="hora" disabled> <br>
         Data de Nascimento:
-        <input type="date" name="dataNascimento"> <br>
+        <input type="date" name="dataNascimento" min="2023-06-26" max="2023-07-26"> <br>
         Telefone:
         <input type="tel" name="telefone"> <br>
         URL da Foto:
@@ -46,7 +49,19 @@
         </select> <br>
         Fale um pouco sobre você: <br>
         <textarea cols="30" rows="3" placeholder="Digite aqui sua descrição">Texto padrão</textarea> <br>        
-        <button>Enviar</button>
+        
+        <!--
+            button -> Botão comum (auxilia na execução de um evento js)
+            submit -> Submete as infos do form
+            reset -> Limpar os campos de um form
+        -->
+        <button type="button">Não faz nada</button>
+        <button type="reset">Limpar</button>
+        <button type="submit">Submete</button>
+        <br>
+        <input type="button" value="Não faz Nada">
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html> 
